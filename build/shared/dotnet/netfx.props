@@ -1,5 +1,5 @@
 <Project>
-  <ItemGroup Condition="$(TargetFramework.StartsWith('net4')) and '$(OS)' == 'Unix'">
-    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" PrivateAssets="All" Version="1.0.0-preview.2" />
+  <ItemGroup Condition="$(TargetFramework.StartsWith('net4'))">
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" PrivateAssets="All" Version="1.0.0" />
   </ItemGroup>
 </Project>
