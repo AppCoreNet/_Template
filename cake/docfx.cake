@@ -1,5 +1,5 @@
-#addin "nuget:?package=Cake.DocFx&version=0.13.0"
-#tool "nuget:?package=docfx.console&version=2.43.1"
+#addin "nuget:?package=Cake.DocFx&version=0.13.1"
+#tool "nuget:?package=docfx.console&version=2.50.0"
 
 public partial class BuildParameters
 {
