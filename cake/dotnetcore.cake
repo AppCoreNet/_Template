@@ -1,6 +1,6 @@
-#module "nuget:?package=Cake.DotNetTool.Module&version=0.3.0"
-#addin "nuget:?package=Cake.Coverlet&version=2.3.4"
-#tool "dotnet:?package=GitVersion.Tool&version=5.0.0-beta3-35"
+#module "nuget:?package=Cake.DotNetTool.Module&version=0.4.0"
+#addin "nuget:?package=Cake.Coverlet&version=2.4.2"
+#tool "dotnet:?package=GitVersion.Tool&version=5.1.3"
 
 public static partial class BuildConstants
 {

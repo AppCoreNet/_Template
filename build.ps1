@@ -8,7 +8,7 @@ $ErrorActionPreference = "Stop"
 
 $ToolsPath = Join-Path $PSScriptRoot "build" -Resolve | Join-Path -ChildPath "tools"
 $Cake = Join-Path $ToolsPath "dotnet-cake"
-$CakeVersion = "0.34.1"
+$CakeVersion = "0.37.0"
 $CakeArgs = @("--paths_tools=$ToolsPath")
 
 function Exec {
@@ -17,13 +17,6 @@ function Exec {
   If ($LASTEXITCODE -ne 0) {
     Write-Error "Execution failed with exit code $LASTEXITCODE"
   }
-}
-
-# dotnet tool fails on hosted macOS agent
-# https://github.com/dotnet/cli/issues/9114
-If ($IsMacOS) {
-  $env:DOTNET_ROOT="$(dirname "$(readlink "$(command -v dotnet)")")"
-  Write-Host $env:DOTNET_ROOT
 }
 
 # bootstrap cake
