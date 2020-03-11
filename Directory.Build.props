@@ -1,9 +1,9 @@
 <Project>
   <PropertyGroup>
-    <Authors>Christian Prochnow</Authors>
+    <Authors>AppCore .NET Contributors</Authors>
     <Company>The AppCore .NET project</Company>
-    <Product>AppCore Template Framework</Product>
-    <Copyright>Copyright (c) 2018,2019 the AppCore project</Copyright>
+    <Product>AppCore .NET Project Template</Product>
+    <Copyright>Copyright (c) 2018-2020 the AppCore project</Copyright>
     <Version>1.0.0</Version>
     <PackageLicenseUrl>https://github.com/AppCoreNet/Template/blob/dev/LICENSE</PackageLicenseUrl>
     <RepositoryUrl>https://github.com/AppCoreNet/Template</RepositoryUrl>
