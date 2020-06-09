@@ -7,6 +7,8 @@ AppCore .NET <Project>
 
 ## Packages
 
+Latest development packages can be found on [MyGet](https://www.myget.org/gallery/appcorenet).
+
 Package                                           | Description
 --------------------------------------------------|------------------------------------------------------------------------------------------------------
 
