@@ -1,5 +1,5 @@
 #module "nuget:?package=Cake.DotNetTool.Module&version=0.4.0"
-#tool "dotnet:?package=GitVersion.Tool&version=5.1.3"
+#tool "dotnet:?package=GitVersion.Tool&version=5.3.5"
 #tool "nuget:?package=ReportGenerator&version=4.6.1"
 
 public static partial class BuildConstants
