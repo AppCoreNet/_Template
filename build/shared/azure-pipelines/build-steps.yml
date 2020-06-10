@@ -1,6 +1,6 @@
 parameters:
   configuration: 'Debug'
-  
+
 steps:
 - pwsh: ./build.ps1 --configuration='${{ parameters.configuration }}'
   displayName: Build
@@ -11,6 +11,7 @@ steps:
   condition: always()
   inputs:
     testRunner: VSTest
+    testRunTitle: '$(Agent.OS)-$(Agent.OSArchitecture)'
     testResultsFiles: '$(Build.ArtifactStagingDirectory)/test-results/*.trx'
     failTaskOnFailedTests: true
     buildConfiguration: ${{ parameters.configuration }}
@@ -19,4 +20,4 @@ steps:
   condition: always()
   inputs:
     codeCoverageTool: 'cobertura'
-    summaryFileLocation: '$(Build.ArtifactStagingDirectory)/test-results/*.cobertura.xml'
+    summaryFileLocation: '$(Build.ArtifactStagingDirectory)/test-results/report/Cobertura.xml'
