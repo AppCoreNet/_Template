@@ -9,7 +9,6 @@
     <RepositoryUrl>https://github.com/AppCoreNet/Template</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <LangVersion>latest</LangVersion>
-    <NoWarn>$(NoWarn);NU5105</NoWarn>
     <!--
     <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
     <RestoreLockedMode Condition="'$(CI)' == 'true'">true</RestoreLockedMode>
