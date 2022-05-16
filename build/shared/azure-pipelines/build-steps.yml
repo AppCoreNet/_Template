@@ -1,10 +1,11 @@
 parameters:
   configuration: 'Debug'
+  testFilter: ''
 
 steps:
-- pwsh: ./build.ps1 --configuration='${{ parameters.configuration }}'
+- pwsh: ./build.ps1 --configuration "${{ parameters.configuration }}"
   displayName: Build
-- pwsh: ./build.ps1 --target=Test --skip-target='Build' --configuration='${{ parameters.configuration }}' --artifactsDir='$(Build.ArtifactStagingDirectory)'
+- pwsh: ./build.ps1 --target "Test" --skip-target "Build" --configuration "${{ parameters.configuration }}" --test-filter "${{ parameters.testFilter }}" --artifactsDir "$(Build.ArtifactStagingDirectory)"
   displayName: Run Tests
 - task: PublishTestResults@2
   displayName: Publish Test Results

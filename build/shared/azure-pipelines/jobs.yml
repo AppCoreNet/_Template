@@ -1,5 +1,6 @@
 parameters:
   configuration: 'Debug'
+  testFilter: ''
 
 jobs:
 - job: Linux
@@ -9,10 +10,11 @@ jobs:
   - template: ./install-steps.yml  
   - template: ./build-steps.yml
     parameters:
-      configuration: $(configuration)
+      configuration: '${{ parameters.configuration }}'
+      testFilter: '${{ parameters.testFilter }}'
   - template: ./publish-steps.yml
     parameters:
-      configuration: $(configuration)  
+      configuration: '${{ parameters.configuration }}'
 
 - job: MacOS
   pool:
@@ -21,7 +23,8 @@ jobs:
   - template: ./install-steps.yml  
   - template: ./build-steps.yml
     parameters:
-      configuration: $(configuration)
+      configuration: '${{ parameters.configuration }}'
+      testFilter: '${{ parameters.testFilter }}'
       
 - job: Windows
   pool:
@@ -30,4 +33,5 @@ jobs:
   - template: ./install-steps.yml  
   - template: ./build-steps.yml
     parameters:
-      configuration: $(configuration)
+      configuration: '${{ parameters.configuration }}'
+      testFilter: '${{ parameters.testFilter }}'

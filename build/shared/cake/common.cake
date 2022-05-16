@@ -1,4 +1,4 @@
-#addin "nuget:?package=Cake.FileHelpers&version=3.2.1"
+#addin "nuget:?package=Cake.FileHelpers&version=4.0.1"
 
 #load "parameters.cake"
 #load "constants.cake"

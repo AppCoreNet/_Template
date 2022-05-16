@@ -1,3 +1,5 @@
+static List<Action<BuildParameters, ICakeContext>> BuildParametersInit = new List<Action<BuildParameters, ICakeContext>>();
+
 public partial class BuildParameters
 {
     private readonly ICakeContext _context;
@@ -25,6 +27,9 @@ public partial class BuildParameters
             Version = BuildVersion.Create(context)
         };
         
+        foreach(Action<BuildParameters, ICakeContext> initFunc in BuildParametersInit)
+            initFunc(p, context);
+
         init?.Invoke(p);
         return p;
     }
