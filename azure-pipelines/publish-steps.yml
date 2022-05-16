@@ -2,7 +2,7 @@ parameters:
   configuration: 'Debug'
   
 steps:
-- pwsh: ./build.ps1 --target=Publish --configuration='${{ parameters.configuration }}' --artifactsDir='$(Build.ArtifactStagingDirectory)'
+- pwsh: ./build.ps1 --target "Publish" --configuration "${{ parameters.configuration }}" --artifactsDir "$(Build.ArtifactStagingDirectory)"
   displayName: Publish
 - task: NuGetCommand@2
   condition: and(succeeded(), eq(variables['Build.Reason'], 'PullRequest'))
